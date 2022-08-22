@@ -30,6 +30,20 @@ yarn add ts-node-dev -D
         app.use('/categories', categoriesRoutes)
         ```
 
+# Repository
+- Responsáveis pela manipulação de dados do app
+    - Conexao db
+    - Crud
+
+- Rotas não devem conhecer modelo
+    - Podemos utilizar DTO (Data transfer object)
+        - Criar um objeto qeu vai ser responsável pela transferencia de dados entre uma classe e outra
+    ```ts
+    interface ICreateCategoryDTO {
+        name: string,
+        description: string
+    }
+    ```
 # Dicas ts
 - Desabilitar "strict": true
     - Fica checando erros dentro do app
