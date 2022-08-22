@@ -6,6 +6,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.send('Hello world'))
 
-app.use(categoriesRoutes)
+// deixando tudo com prefixo categories
+app.use('/categories', categoriesRoutes)
 
 app.listen(3333, () => console.log('Server is running'))
